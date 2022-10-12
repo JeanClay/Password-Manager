@@ -29,7 +29,7 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        String[] urls = {"/login/**", "/api/usuarios/cadastrar/**"};
+        String[] urls = {"/login/**", "/api/users/cadastrar/**"};
 
 
         http.csrf().disable().authorizeRequests().antMatchers(HttpMethod.POST, urls).permitAll()

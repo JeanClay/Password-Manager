@@ -3,6 +3,7 @@ package br.com.uniamerica.PasswordManager.controller;
 import br.com.uniamerica.PasswordManager.entity.User;
 import br.com.uniamerica.PasswordManager.service.UserService;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.http.HttpStatus;
@@ -16,8 +17,10 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/api/users")
+@CrossOrigin
 public class UserController {
 
+    @Autowired
     private UserService userService;
 
     private PasswordEncoder passwordEncoder;

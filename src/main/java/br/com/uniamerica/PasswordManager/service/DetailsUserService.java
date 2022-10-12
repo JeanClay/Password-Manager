@@ -3,6 +3,7 @@ package br.com.uniamerica.PasswordManager.service;
 import br.com.uniamerica.PasswordManager.data.UserDataDetails;
 import br.com.uniamerica.PasswordManager.entity.User;
 import br.com.uniamerica.PasswordManager.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +17,7 @@ import java.util.Optional;
 @Component
 public class DetailsUserService implements org.springframework.security.core.userdetails.UserDetailsService {
 
+    @Autowired
     private final UserRepository userRepository;
 
     public DetailsUserService(UserRepository userRepository) {
